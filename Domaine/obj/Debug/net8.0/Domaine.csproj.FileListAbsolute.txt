@@ -1,0 +1,11 @@
+C:\Users\SNDIENGK\Documents\challenge\Lost-and-found\Domaine\bin\Debug\net8.0\Domaine.deps.json
+C:\Users\SNDIENGK\Documents\challenge\Lost-and-found\Domaine\bin\Debug\net8.0\Domaine.dll
+C:\Users\SNDIENGK\Documents\challenge\Lost-and-found\Domaine\bin\Debug\net8.0\Domaine.pdb
+C:\Users\SNDIENGK\Documents\challenge\Lost-and-found\Domaine\obj\Debug\net8.0\Domaine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SNDIENGK\Documents\challenge\Lost-and-found\Domaine\obj\Debug\net8.0\Domaine.AssemblyInfoInputs.cache
+C:\Users\SNDIENGK\Documents\challenge\Lost-and-found\Domaine\obj\Debug\net8.0\Domaine.AssemblyInfo.cs
+C:\Users\SNDIENGK\Documents\challenge\Lost-and-found\Domaine\obj\Debug\net8.0\Domaine.csproj.CoreCompileInputs.cache
+C:\Users\SNDIENGK\Documents\challenge\Lost-and-found\Domaine\obj\Debug\net8.0\Domaine.dll
+C:\Users\SNDIENGK\Documents\challenge\Lost-and-found\Domaine\obj\Debug\net8.0\refint\Domaine.dll
+C:\Users\SNDIENGK\Documents\challenge\Lost-and-found\Domaine\obj\Debug\net8.0\Domaine.pdb
+C:\Users\SNDIENGK\Documents\challenge\Lost-and-found\Domaine\obj\Debug\net8.0\ref\Domaine.dll
