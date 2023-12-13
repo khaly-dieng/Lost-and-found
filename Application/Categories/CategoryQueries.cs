@@ -1,9 +1,11 @@
 ﻿using Application.Abstractions;
+using Application.Abstractions.Caching;
 using AutoMapper;
 using Domain.DTO.CategoryDTO;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System.Collections.Generic;
 
 namespace Application.Categories
 {
@@ -48,17 +50,33 @@ namespace Application.Categories
         {
             private readonly ILostAndFoundDbContext _context;
             private readonly IMapper _mapper;
+            private readonly ICacheService _cacheService;
             public GetAllCategoryQueryHandler(IServiceProvider serviceProvider)
             {
                 _context = serviceProvider.GetRequiredService<ILostAndFoundDbContext>();
                 _mapper = serviceProvider.GetRequiredService<IMapper>();
+                _cacheService = serviceProvider.GetRequiredService<ICacheService>();
             }
+            /// <summary>
+            /// Handles the GetAllCategoryQuery request and returns a list of GetCategoryDto objects.
+            /// </summary>
+            /// <param name="request">The GetAllCategoryQuery request.</param>
+            /// <param name="cancellationToken">The cancellation token.</param>
+            /// <returns>A list of GetCategoryDto objects.</returns>
             public async Task<List<GetCategoryDto>> Handle(GetAllCategoryQuery request, CancellationToken cancellationToken)
             {
-                var categories = await _context.Categories
-                    .Include(c => c.Items)
-                    .ToListAsync(cancellationToken);
-                return _mapper.Map<List<GetCategoryDto>>(categories);
+                return await _cacheService.GetAsync(
+                    "categories",
+                    async () =>
+                    {
+                        var categories = await _context.Categories
+                        .Include(c => c.Items)
+                        .ToListAsync(cancellationToken);
+                        var categoriesDtoList = _mapper.Map<List<GetCategoryDto>>(categories);
+                        return categoriesDtoList;
+                    },
+                    cancellationToken);
+                
             }
         }
         #endregion

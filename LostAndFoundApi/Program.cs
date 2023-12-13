@@ -1,8 +1,10 @@
 using Application;
+using Application.Abstractions.Caching;
 using Application.Abstractions.Repositories;
 using Application.Behaviours;
 using Infrastructure;
 using Infrastructure.AutoMapper;
+using Infrastructure.Caching;
 using Infrastructure.Data;
 using Infrastructure.Repositories;
 using MediatR;
@@ -19,6 +21,9 @@ builder.Services.AddDbContext<LostAndFoundDbContext>(options =>
     var ConnectionString = builder.Configuration.GetConnectionString("local");
     options.UseNpgsql(ConnectionString);
 });
+
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSingleton<ICacheService, CacheService>();
 
 builder.Services.AddAutoMapper(typeof(AutoMapperConfigProfile));
 

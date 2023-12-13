@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LostAndFoundApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c238cd2836be9851b6ca61c30d3e6c1707b1c6b")]
 [assembly: System.Reflection.AssemblyProductAttribute("LostAndFoundApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LostAndFoundApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

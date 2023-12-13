@@ -13,3 +13,4 @@ C:\Users\SNDIENGK\Documents\challenge\Lost-and-found\Application\obj\Debug\net8.
 C:\Users\SNDIENGK\Documents\challenge\Lost-and-found\Application\obj\Debug\net8.0\refint\Application.dll
 C:\Users\SNDIENGK\Documents\challenge\Lost-and-found\Application\obj\Debug\net8.0\Application.pdb
 C:\Users\SNDIENGK\Documents\challenge\Lost-and-found\Application\obj\Debug\net8.0\ref\Application.dll
+C:\Users\SNDIENGK\Documents\challenge\Lost-and-found\Application\obj\Debug\net8.0\Application.sourcelink.json
